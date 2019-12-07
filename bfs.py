@@ -1,6 +1,6 @@
 import sys
     
-def bfs(l, val) -> int:
+def bfs(l, val):
 	if not len(l):
 		return -1
 	low, high = 0, len(l)
