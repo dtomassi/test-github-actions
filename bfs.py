@@ -1,19 +1,21 @@
 import sys
 
-def bfs(l, val) -> int:
-	if not len(l):
-		return -1
-	low, high = 0, len(l)
-	
-	while low < high:
-		mid = (low + high) // 2
-		if l[mid] > val:
-			high = mid
-		elif l[mid] < val:
-			low = mid
-		else:
-			return val
-	return -1
+
+def bfs(l, val):
+    if not len(l):
+        return -1
+    low, high = 0, len(l)
+
+    while low < high:
+        mid = (low + high) // 2
+        if l[mid] > val:
+            high = mid
+        elif l[mid] < val:
+            low = mid
+        else:
+            return val
+    return -1
+
 
 def _validate_input(argv):
     if len(argv) != 3:
@@ -30,7 +32,8 @@ def main(argv=None):
     list_nums, value = _validate_input(argv)
 
     bfs_ret = bfs(list_nums, value)
-    print('Value {} in list'.format(bfs_ret)) if bfs_ret != -1 else print('Value {} not in list'.format(value)) 
+    print('Value {} in list'.format(bfs_ret)) if bfs_ret != -1 else print('Value {} not in list'.format(value))
+
 
 if __name__ == '__main__':
     sys.exit(main())
