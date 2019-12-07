@@ -1,5 +1,5 @@
 import sys
-
+    
 def bfs(l, val) -> int:
 	if not len(l):
 		return -1
