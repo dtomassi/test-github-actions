@@ -14,6 +14,7 @@ def bfs(l, val):
 		else:
 			return val
 	return -1
+
 def _validate_input(argv):
     if len(argv) != 3:
         print('Incorrect number of arguments. Exiting')
