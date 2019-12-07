@@ -4,7 +4,7 @@ def bfs(l, val) -> int:
 	if not len(l):
 		return -1
 	low, high = 0, len(l)
-	
+
 	while low < high:
 		mid = (low + high) // 2
 		if l[mid] > val:
