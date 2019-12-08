@@ -1,7 +1,9 @@
 import sys
 
+from typing import List
+from typing import Union
 
-def bfs(l, val):
+def bfs(l: List[int], val:int) -> int:
     if not len(l):
         return -1
     low, high = 0, len(l)
@@ -17,7 +19,7 @@ def bfs(l, val):
     return -1
 
 
-def _validate_input(argv):
+def _validate_input(argv: List[str]) -> Union[List[int], int]:
     if len(argv) != 3:
         print('Incorrect number of arguments. Exiting')
         sys.exit(1)
