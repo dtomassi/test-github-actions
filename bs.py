@@ -34,7 +34,7 @@ def main(argv=None):
     list_nums, value = _validate_input(argv)
 
     bs_ret = bs(list_nums, value)
-    print('Value {} in list'.format(bfs_ret)) if bfs_ret != -1 else print('Value {} not in list'.format(value))
+    print('Value {} in list'.format(bs_ret)) if bs_ret != -1 else print('Value {} not in list'.format(value))
 
 
 if __name__ == '__main__':
