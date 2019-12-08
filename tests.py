@@ -11,3 +11,8 @@ class TestBFS:
     def test_three(self):
         assert(bs([], 0) == -1)
 
+    def test_four(self):
+        assert(bs([1, 2, 3], 4) == -1)
+
+    def test_five(self):
+        assert(bs([-3, -2, -1, 2, 4, 6], 4) == 4)

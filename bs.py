@@ -3,17 +3,17 @@ import sys
 from typing import List
 from typing import Union
 
-def bs(l: List[int], val:int) -> int:
+
+def bs(l: List[int], val: int) -> int:
     if not len(l):
         return -1
-    low, high = 0, len(l)
-
+    low, high = 0, len(l) - 1
     while low < high:
         mid = (low + high) // 2
         if l[mid] > val:
-            high = mid
+            high = mid - 1
         elif l[mid] < val:
-            low = mid
+            low = mid + 1
         else:
             return val
     return -1
