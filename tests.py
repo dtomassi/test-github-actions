@@ -10,3 +10,6 @@ class TestBFS:
 
     def test_three(self):
         assert(bfs([], 0) == -1)
+
+    def test_four(self):
+        assert(bfs([1,2,3], 4) == -1)
