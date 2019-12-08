@@ -1,15 +1,13 @@
-from bfs import bfs
+from bs import bs
 
 
 class TestBFS:
     def test_one(self):
-        assert(bfs([1, 2, 3, 4, 5], 1) == 1)
+        assert(bs([1, 2, 3, 4, 5], 1) == 1)
 
     def test_two(self):
-        assert(bfs([1, 2, 3, 4, 5], 0) == -1)
+        assert(bs([1, 2, 3, 4, 5], 0) == -1)
 
     def test_three(self):
-        assert(bfs([], 0) == -1)
+        assert(bs([], 0) == -1)
 
-    def test_four(self):
-        assert(bfs([1,2,3], 4) == -1)

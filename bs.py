@@ -3,7 +3,7 @@ import sys
 from typing import List
 from typing import Union
 
-def bfs(l: List[int], val:int) -> int:
+def bs(l: List[int], val:int) -> int:
     if not len(l):
         return -1
     low, high = 0, len(l)
@@ -33,7 +33,7 @@ def main(argv=None):
         argv = sys.argv
     list_nums, value = _validate_input(argv)
 
-    bfs_ret = bfs(list_nums, value)
+    bs_ret = bs(list_nums, value)
     print('Value {} in list'.format(bfs_ret)) if bfs_ret != -1 else print('Value {} not in list'.format(value))
 
 
