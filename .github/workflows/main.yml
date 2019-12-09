@@ -27,9 +27,9 @@ jobs:
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
-        file: ./coverage.xml #optional
+        #file: ./coverage.xml #optional
         flags: unittests #optional
-        name: codecov-umbrella #optional
+        #name: codecov-umbrella #optional
         #yml: ./codecov.yml #optional
         fail_ci_if_error: true #optional (default = false)
     - name: Test with pytest
