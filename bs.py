@@ -8,7 +8,7 @@ def bs(l: List[int], val: int) -> int:
     if not len(l):
         return -1
     low, high = 0, len(l) - 1
-    while low < high:
+    while low <= high:
         mid = (low + high) // 2
         if l[mid] > val:
             high = mid - 1
