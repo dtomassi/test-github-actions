@@ -29,6 +29,7 @@ jobs:
         pytest tests.py
     - name: Generate Code Coverage Report
       run: |
+        pip3 install pytest-cov
         pytest --cov-report xml --cov bs tests.py
     - name: Upload Code Coverage Report to Codecov
       uses: codecov/codecov-action@v1
