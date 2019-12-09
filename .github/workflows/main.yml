@@ -23,16 +23,20 @@ jobs:
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 . --count --max-complexity=10 --max-line-length=120 --statistics
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }} #required
-        #file: ./coverage.xml #optional
-        flags: unittests #optional
-        #name: codecov-umbrella #optional
-        #yml: ./codecov.yml #optional
-        fail_ci_if_error: true #optional (default = false)
     - name: Test with pytest
       run: |
         pip install pytest
         pytest tests.py
+    - name: Generate Code Coverage Report
+      run: |
+        pip3 install pytest-cov
+        pytest --cov-report xml --cov bs tests.py
+    - name: Upload Code Coverage Report to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} #required
+        file: ./coverage.xml #optional
+        #flags: pytest #optional
+        #name: codecov-umbrella #optional
+        #yml: ./codecov.yml #optional
+        fail_ci_if_error: true #optional (default = false)
