@@ -36,7 +36,7 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
         file: ./coverage.xml #optional
-        flags: pytest #optional
+        #flags: pytest #optional
         #name: codecov-umbrella #optional
         #yml: ./codecov.yml #optional
         fail_ci_if_error: true #optional (default = false)
