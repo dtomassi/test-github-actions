@@ -29,3 +29,7 @@ class TestBFS:
     def test_eight(self):
         stdout = subprocess.run(['python3', 'bs.py', '[1,2,3]', '1'], stdout=subprocess.PIPE).stdout.decode('utf-8')
         assert(stdout == 'Value 1 in list\n')
+
+    def test_nine(self):
+        stdout = subprocess.run(['python3', 'bs.py', '[1,2,3]'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+        assert(stdout == 'Incorrect number of arguments. Exiting\n')
